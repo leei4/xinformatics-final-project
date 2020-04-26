@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-#map{
+#googleMap{
   max-width: 100%;
   max-height: 100%;
 }

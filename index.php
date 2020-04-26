@@ -27,8 +27,8 @@
       <div class="sidebar-heading">Start Bootstrap </div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="form.php" class="list-group-item list-group-item-action bg-light">Test Form</a>
+        <a href="SampleDatabase.php" class="list-group-item list-group-item-action bg-light">DB Test</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
@@ -71,7 +71,7 @@
 
       <div class="container-fluid">
         <h1 class="mt-4">Flight Map</h1>
-        <img src = images/map.PNG id="map">
+        <div id="googleMap" style="width:100%;height:400px;"></div>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -84,6 +84,29 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Menu Toggle Script -->
+  <script>
+    function myMap() {
+        var country = "United States"
+
+        var myOptions = {
+            zoom: 4,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+      
+        var map = new google.maps.Map(document.getElementById("googleMap"),myOptions);
+
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode( { 'address': country }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          map.setCenter(results[0].geometry.location);
+        } else {
+          alert("Could not find location: " + location);
+        }
+      });
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoq-uDRTXb3LMBOOrEBXFSjw-n7XEoT2c&callback=myMap"></script>
   <script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
