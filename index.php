@@ -27,8 +27,7 @@
       <div class="sidebar-heading">Start Bootstrap </div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="form.php" class="list-group-item list-group-item-action bg-light">Test Form</a>
-        <a href="SampleDatabase.php" class="list-group-item list-group-item-action bg-light">DB Test</a>
+        <a href="SampleDatabase.php" class="list-group-item list-group-item-action bg-light">Query Test</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
